@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { PokemonFacade } from '../../store/facades/pokeapi.facade';
 import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-poke-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './poke-list.component.html',
   styleUrl: './poke-list.component.scss'
 })
@@ -22,5 +23,6 @@ export class PokeListComponent {
 
   ngOnInit(): void {
     this.pokemonFacade.loadPokemon();
+    this.pokemonList$.subscribe();
   }
 }

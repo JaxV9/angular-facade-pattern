@@ -1,1 +1,8 @@
 <p>poke-list works!</p>
+<div *ngIf="loading$ | async">Chargement...</div>
+<div *ngIf="error$ | async as error">Erreur : {{ error }}</div>
+<ul *ngIf="pokemonList$ | async as pokemonList">
+  <li *ngFor="let pokemon of pokemonList">
+    {{ pokemon.name }}
+  </li>
+</ul>
