@@ -1,11 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 import { loadPokemon, loadPokemonFailure, loadPokemonSuccess } from '../actions/pokeapi.actions';
+import { PokemonState } from '../../model/pokemonModel';
 
-export interface PokemonState {
-  pokemonList: any[];
-  loading: boolean;
-  error: string | null;
-}
 
 export const initialState: PokemonState = {
   pokemonList: [],

@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { PokemonState } from '../reducers/pokeapi.reducer';
+import { PokemonState } from '../../model/pokemonModel';
 
 export const selectPokemonState = createFeatureSelector<PokemonState>('pokemon');
 
