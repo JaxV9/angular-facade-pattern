@@ -9,7 +9,7 @@ export class PokeapiService {
 
   url = 'https://pokeapi.co/api/v2/pokemon/';
   constructor(private http: HttpClient) {}
-  getJoke(): Observable<any> {
+  getPokemonsList(): Observable<any> {
     return this.http.get(this.url, { headers: { Accept: 'application/json' } });
   }
 }
